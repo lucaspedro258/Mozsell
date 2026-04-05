@@ -50,18 +50,19 @@ document.querySelector("#sellForm")?.addEventListener("submit", async (e) => {
     return;
   }
 
-  await fetch("http://localhost:5000/api/products", {
+ const API = "https://teu-backend.onrender.com"; 
+ {
     method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      "Authorization": token
-    },
+    headers;{
+      "Content-Type"; "application/json",
+      "Authorization"; token
+    };
     body: JSON.stringify({
       title: title.value,
       price: price.value,
       description: description.value
     })
-  });
+  };
 
   alert("Produto publicado!");
 
